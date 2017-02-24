@@ -1,0 +1,13 @@
+1:jquery use 2.1.1 (less than 3)
+
+2: in webpack.base.conf.js
+var webpack = require("webpack")
+
+plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery",
+      "window.jQuery": "jquery",
+    })
+  ]
