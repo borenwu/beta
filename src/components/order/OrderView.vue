@@ -3,7 +3,7 @@
     <div class="col s12 m12 l12">
       <div class="card">
         <div class="card-content">
-          <h4>订单信息</h4>
+          <h4>订单</h4>
           <div class="row">
             <form class="col s12">
               <div class="row">
