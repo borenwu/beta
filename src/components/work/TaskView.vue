@@ -3,7 +3,7 @@
     <div class="col s12 m12 l12">
       <div class="card">
         <div class="card-content">
-          <h4>工单</h4>
+          <h4>任务</h4>
           <div class="divider"/>
           <br/>
 
@@ -34,8 +34,8 @@
             <ul class="collapsible col s12" data-collapsible="accordion">
               <li>
                 <div class="collapsible-header">
-                  <i class="material-icons">filter_drama</i>
-                  First
+                  <input type="checkbox" id="如皋日报"/>
+                  <label for="如皋日报" class="task-name">如皋日报</label>
                 </div>
                 <div class="collapsible-body">
                   <span>Lorem ipsum dolor sit amet.</span>
@@ -44,8 +44,8 @@
 
               <li>
                 <div class="collapsible-header">
-                  <i class="material-icons">place</i>
-                  Second
+                  <input type="checkbox" id="海安日报"/>
+                  <label  class="task-name" for="海安日报">海安日报</label>
                 </div>
                 <div class="collapsible-body">
                   <span>Lorem ipsum dolor sit amet.</span>
@@ -61,7 +61,9 @@
 </template>
 
 <style>
-
+  .task-name{
+    color: black;
+  }
 </style>
 
 <script>

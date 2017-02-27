@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import OrderView from 'components/order/OrderView'
-import WorkView from 'components/work/WorkView'
+import TaskView from 'components/work/TaskView'
 import WarehouseView from 'components/warehouse/WarehouseView'
-import FinanceView from 'components/finance/FinanceView'
+import SaleView from 'components/finance/SaleView'
 import HomeView from 'components/home/HomeView'
 
 Vue.use(Router)
@@ -17,9 +17,9 @@ export default new Router({
       component: OrderView
     },
     {
-      path: '/work',
-      name: 'WorkView',
-      component: WorkView
+      path: '/task',
+      name: 'TaskView',
+      component: TaskView
     },
     {
       path: '/warehouse',
@@ -27,9 +27,9 @@ export default new Router({
       component: WarehouseView
     },
     {
-      path: '/finance',
-      name: 'FinanceView',
-      component: FinanceView
+      path: '/sale',
+      name: 'SaleView',
+      component: SaleView
     },
     {
       path: '/home',
