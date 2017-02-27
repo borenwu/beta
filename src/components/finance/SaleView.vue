@@ -3,7 +3,7 @@
     <div class="col s12 m12 l12">
       <div class="card">
         <div class="card-content">
-          <h4>销售</h4>
+          <h4>今日销售</h4>
           <div class="divider"/>
           <br/>
 
@@ -30,29 +30,58 @@
 
           <div class="divider"/>
           <br/>
-          <div class="row todo-list">
-            <ul class="collapsible col s12" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header">
-                  <input type="checkbox" id="如皋日报"/>
-                  <label for="如皋日报" class="task-name">如皋日报</label>
-                </div>
-                <div class="collapsible-body">
-                  <span>Lorem ipsum dolor sit amet.</span>
-                </div>
-              </li>
+          <div class="row sale-table">
+            <table>
+              <thead>
+              <tr>
+                <th data-field="id">客户</th>
+                <th data-field="id">任务名称</th>
+                <th data-field="id">印刷量</th>
+                <th data-field="name">单价</th>
+                <th data-field="price">总价</th>
+              </tr>
+              </thead>
 
-              <li>
-                <div class="collapsible-header">
-                  <input type="checkbox" id="海安日报"/>
-                  <label class="task-name" for="海安日报">海安日报</label>
-                </div>
-                <div class="collapsible-body">
-                  <span>Lorem ipsum dolor sit amet.</span>
-                </div>
-              </li>
+              <tbody>
+              <tr>
+                <td>{{client}}</td>
+                <td>{{taskName}}</td>
+                <td>{{number}}</td>
+                <td>
+                  <div class="input-field inline">
+                    <input type="number" v-model="price" placeholder="单价">
+                  </div>
+                  元
+                </td>
+                <td>{{calTotal()}}元</td>
+              </tr>
+              <tr>
+                <td>{{client}}</td>
+                <td>{{taskName}}</td>
+                <td>{{number}}</td>
+                <td>
+                  <div class="input-field inline">
+                    <input type="number" v-model="price" placeholder="单价">
+                  </div>
+                  元
+                </td>
+                <td>{{calTotal()}}元</td>
+              </tr>
+              <tr>
+                <td>{{client}}</td>
+                <td>{{taskName}}</td>
+                <td>{{number}}</td>
+                <td>
+                  <div class="input-field inline">
+                    <input type="number" v-model="price" placeholder="单价">
+                  </div>
+                  元
+                </td>
+                <td>{{calTotal()}}元</td>
+              </tr>
+              </tbody>
+            </table>
 
-            </ul>
           </div>
         </div>
       </div>
@@ -68,10 +97,20 @@
   export default{
     data(){
       return {
-        msg: 'hello finance'
+        msg: 'hello sale',
+        client:"如皋日报",
+        taskName:"如皋日报",
+        number: 5,
+        totalPrice: 0.0,
+        price: 0.0
       }
     },
     components: {},
+    methods: {
+      calTotal(){
+        return this.price * this.number
+      }
+    },
     mounted(){
       $('.datepick').pickadate({
         selectMonths: true, // Creates a dropdown to control month
